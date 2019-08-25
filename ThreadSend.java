@@ -14,10 +14,12 @@ class ThreadSend extends Thread {
 
     @Override
     public void run() {
-        synchronized(this.sender) {
+        /*synchronized(this.sender) {
             // this is the critical zone (one thread at time should use this block)
             this.sender.send(this.msg);
-        }
+        }*/
+        this.sender.send(this.msg);
+
     }
 
 }
